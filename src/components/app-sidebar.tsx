@@ -15,12 +15,14 @@ import userAvatar from '@/assets/user.png'
 
 import { NavMain } from "@/components/nav-main"
 import { NavUser } from "@/components/nav-user"
+import { NavProjects } from "@/components/nav-projects"
 import { TeamSwitcher } from "@/components/team-switcher"
 
 import {
     Sidebar,
     SidebarContent,
     SidebarFooter,
+    SidebarGroup,
     SidebarHeader,
     SidebarRail,
 } from "@/components/ui/sidebar"
@@ -51,25 +53,6 @@ const data = {
     ],
     navMain: [
       {
-        title: "Jogo Aberto",
-        url: "#",
-        icon: MessagesSquare,
-        isActive: true,
-        items:[],
-      },
-      {
-        title: "Bola em Jogo",
-        url: "#",
-        icon: Volleyball,
-        items: [],
-      },
-      {
-        title: "PDI",
-        url: "#",
-        icon: ChartPie,
-        items: [],
-      },
-      {
         title: "Objetivos",
         url: "#",
         icon: ChartNoAxesCombined,
@@ -88,12 +71,27 @@ const data = {
           },
         ],
       },
+    ],
+    projects: [
       {
-        title: "Store",
+        name: "Jogo Aberto",
+        url: "#",
+        icon: MessagesSquare,
+      },
+      {
+        name: "Bola em Jogo",
+        url: "#",
+        icon: Volleyball,
+      },
+      {
+        name: "PDI",
+        url: "#",
+        icon: ChartPie,
+      },
+      {
+        name: "Store",
         url: "#",
         icon: Store,
-        isActive: false,
-        items: [],
       },
     ],
   }
@@ -104,7 +102,10 @@ const data = {
           <TeamSwitcher teams={data.teams} />
         </SidebarHeader>
         <SidebarContent>
-          <NavMain items={data.navMain} />
+          <SidebarGroup>
+            <NavProjects projects={data.projects} />
+            <NavMain items={data.navMain} />
+          </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
           <NavUser user={data.user} />

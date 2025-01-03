@@ -6,7 +6,6 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import {
-  SidebarGroup,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -30,7 +29,6 @@ export function NavMain({
     }[]
   }) {
     return (
-      <SidebarGroup>
         <SidebarMenu>
           {items.map((item) => (
             <Collapsible
@@ -64,7 +62,6 @@ export function NavMain({
             </Collapsible>
           ))}
         </SidebarMenu>
-      </SidebarGroup>
     )
   }
   
