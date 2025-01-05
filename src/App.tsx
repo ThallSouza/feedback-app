@@ -17,7 +17,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar"
-import { PostCard } from "./components/post-card"
+import { PostCard } from "./components/post-card/post-card"
 import { PointsCard } from "./components/points-card"
 
 export function App() {
